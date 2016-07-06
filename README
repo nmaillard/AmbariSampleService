@@ -1,1 +1,9 @@
-toto
+SAMPLESERV : Amabri Sample Service
+
+A very simple service definition for Ambari that hits all the different customisable elements
+- custom service code
+- custom servic quicklink
+- custom service command
+- custom service configuration management
+- custom service theme or presentaton ux
+
