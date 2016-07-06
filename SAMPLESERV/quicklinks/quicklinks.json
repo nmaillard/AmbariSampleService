@@ -1,0 +1,33 @@
+{
+    "name": "default",
+    "description": "default quick links configuration",
+    "configuration": {
+        "protocol": {
+            "type":"https",
+            "checks":[
+                {
+                    "property":"yarn.http.policy",
+                    "desired":"HTTPS_ONLY",
+                    "site":"yarn-site"
+                }
+            ]
+        },
+    "links": [
+      {
+        "name": "SAMPLE_UI",
+        "label": "SAMPLE Dashboard",
+        "requires_user_name": "false",
+        "url": "%@://%@:%@",
+
+        "port":{
+          "http_property": "yarn.timeline-service.webapp.address",
+          "http_default_port": "21000",
+          "https_property": "atlas.server.https.port",
+          "https_default_port": "21443",
+          "regex": "^(\\d+)$",
+          "site": "application-properties"
+        }
+      }
+    ]
+  }
+}

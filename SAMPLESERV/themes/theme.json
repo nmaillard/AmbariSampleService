@@ -1,0 +1,112 @@
+{
+  "name": "default",
+  "description": "Default theme for YARN service",
+  "configuration": {
+    "layouts": [
+      {
+        "name": "default",
+        "tabs": [
+          {
+            "name": "settings",
+            "display-name": "Settings",
+            "layout": {
+              "tab-columns": "3",
+              "tab-rows": "2",
+              "sections": [
+                {
+                  "name": "section1",
+                  "display-name": "First Section",
+                  "row-index": "0",
+                  "column-index": "0",
+                  "row-span": "1",
+                  "column-span": "2",
+                  "section-columns": "2",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-section1-col1",
+                      "display-name": "Col1 of First Section",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    },
+                    {
+                      "name": "subsection-section1-col2",
+                      "display-name": "COl2 of First section",
+                      "row-index": "0",
+                      "column-index": "1",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                },
+                {
+                  "name": "section2",
+                  "display-name": "2nd section",
+                  "row-index": "0",
+                  "column-index": "2",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-section2-col1",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "placement": {
+      "configuration-layout": "default",
+      "configs": [
+        {
+          "config": "sample-serv/num.retries",
+          "subsection-name": "subsection-section1-col1"
+        },
+	{
+          "config": "sample-serv/sample.tog",
+          "subsection-name": "subsection-section1-col2"
+        },
+        {
+          "config": "sample-serv/sample.strategy",
+          "subsection-name": "subsection-section2-col1"
+        }
+      ]
+    },
+    "widgets": [
+      {
+        "config": "sample-serv/sample.tog",
+        "widget": {
+          "type": "toggle"
+        }
+      },
+      {
+        "config": "sample-serv/num.retries",
+        "widget": {
+          "type": "slider",
+          "units": [
+            {
+              "unit-name": "int"
+            }
+          ]
+        }
+      },
+       {
+        "config": "sample-serv/sample.strategy",
+        "widget": {
+          "type": "combo"
+        }
+      }
+    ]
+  }
+}
