@@ -1,4 +1,4 @@
-SAMPLESERV : Amabri Sample Service
+## SAMPLESERV : Amabri Sample Service
 
 A very simple service definition for Ambari that hits all the different customisable elements
 - custom service code
